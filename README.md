@@ -44,3 +44,6 @@ install zeromq for linux &amp;&amp; mac
     izmq --sudo 
     
     
+## Thanks
+
+- https://github.com/jameBoy

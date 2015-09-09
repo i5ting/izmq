@@ -1,6 +1,6 @@
 {
   "name": "izmq",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "install zeromq for linux &amp;&amp; mac",
   "main": "index.js",
   "scripts": {
