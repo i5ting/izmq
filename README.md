@@ -2,6 +2,7 @@
 
 install zeromq for linux &amp;&amp; mac
 
+[![npm version](https://badge.fury.io/js/izmq.svg)](http://badge.fury.io/js/izmq)
 
 ## 各平台安装方法
 
@@ -41,3 +42,5 @@ install zeromq for linux &amp;&amp; mac
 或
 
     izmq --sudo 
+    
+    
