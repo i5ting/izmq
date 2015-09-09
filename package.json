@@ -1,0 +1,24 @@
+{
+  "name": "izmq",
+  "version": "0.1.0",
+  "description": "install zeromq for linux &amp;&amp; mac",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm publish .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "izmq": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i5ting/izmq.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i5ting/izmq/issues"
+  },
+  "homepage": "https://github.com/i5ting/izmq#readme"
+}
