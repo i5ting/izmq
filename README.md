@@ -29,4 +29,15 @@ install zeromq for linux &amp;&amp; mac
 
 ## Usages
 
+最简答的用法
+
     izmq
+    
+
+带有sudo权限的安装（当izmq权限不足的时候，可以使用izmq）
+
+    izmq -s 
+    
+或
+
+    izmq --sudo 
