@@ -3,10 +3,10 @@
 //这里调用os模块获取系统信息
  var osInfo = require("./osInfo");
 
-
+var child_process = require('child_process');
 var sys = require('sys')
 
-var exec = require('child_process').exec;
+var exec = child_process.exec;
 console.log('This platform is ' + process.platform);
 if (process.platform === 'linux') {   //linux
 	exec("uname -v", function (error, stdout, stderr) {
@@ -37,18 +37,37 @@ if (process.platform === 'linux') {   //linux
 }
 
 
-function execZeromq(comand){
+/*function execZeromq(comand){
 	exec(comand, function (error, stdout, stderr)  {
 
-		console.log(stdout);
+		//sys.print(stdout);
+		process.stdout.write(stdout);
 		if (error !== null) {
 
-		console.log('exec error: ' + error);
+		console.log('exec error: ' + stderr);
 
 		}
 	});
 }
+*/
 
+function execZeromq(comand) {
+	var child = child_process.spawn(comand);
+	//打印子进程的输出数据
+	child.stdout.on('data', function (data) {
+	  console.log('stdout: ' + data);
+	});
+
+	//监听子进程的错误流数据
+	child.stderr.on('data', function (data) {
+	  console.log('stderr: ' + data);
+	});
+
+	//监听子进程的退出事件
+	child.on('close', function (code) {
+	  console.log('子进程退出，code：' + code);
+	});
+}
 
 
 //console.log(osInfo);
